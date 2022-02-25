@@ -26,63 +26,16 @@
     By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 </p2>
 
+<p role="status">Result: @solution2</p>
 
-@code {
+<button class="btn btn-primary" @onclick="ExecuteExercise2">Click me</button>
 
-    private int recursiveMultiplers = 999;
-    private int solution1;
+<h4>Exercise 3</h4>
 
-        private int getFibonacci(int x)
-    {
-        if (x > 1)
-        {
-            int y = 0;
-            if((x % 3  == 0) || (x % 5 == 0))
-            {
-                y = x;
-            }
+<p3>
+    The prime factors of 13195 are 5, 7, 13 and 29.
 
-            int value = getRecMultiplier(x - 1) + y;
-
-            return value;
+    What is the largest prime factor of the number 600851475143 ?
+</p3>
 
 
-    }
-        else
-        {
-            return 1;
-        }
-
-
-    }
-
-    private void ExecuteExercise1()
-    {
-        solution1 = getRecMultiplier(recursiveMultiplers) - 1;
-    }
-
-    private int getRecMultiplier(int x)
-    {
-        if (x > 1)
-        {
-            int y = 0;
-            if((x % 3  == 0) || (x % 5 == 0))
-            {
-                y = x;
-            }
-
-            int value = getRecMultiplier(x - 1) + y;
-
-            return value;
-
-
-    }
-        else
-        {
-            return 1;
-        }
-
-
-    }
-
-}

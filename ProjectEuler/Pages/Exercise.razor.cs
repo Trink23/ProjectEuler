@@ -3,14 +3,40 @@
     public partial class Exercise
     {
 
+        
+        private int solution3;
+        private long factors = 600851475143;
+        private void ExecuteExercise3()
+        {
+            solution3 = getFactors(factors).Max();
+        }
+
+        private List<int> getFactors(long n)
+        {
+            List<int> factors = new List<int>();
+            int d = 2;
+            
+            while(n>1)
+            {
+                while(n%d == 0)
+                {
+                    factors.Add(d);
+                    n/=d;
+
+                }
+                d++;
+
+            }
+
+            return factors;
+
+        }
+
         private int fibbonaciNumber = 4000000;
         private int solution2;
-
-
         private void ExecuteExercise2()
         {
             solution2 = GetFibonacci(fibbonaciNumber);
-
         }
 
         private int GetFibonacci(int x)

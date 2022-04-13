@@ -2,7 +2,77 @@
 {
     public partial class Exercise
     {
+        private int solution4;
 
+        private void ExecuteExercise4()
+        {
+            int number1 = 999;
+            int number2 = number1;
+
+
+            if(getPalindromicOfMultiplication(number1, number2) !=0)
+            {
+                solution4 = getPalindromicOfMultiplication(number1, number2);
+            }
+        }
+
+        private int getPalindromicOfMultiplication(int number1,int number2) 
+        {
+            int number = number1 * number2;
+
+            int[] numberDividedOnArray = getNumberOnArray(number);
+
+            if (numberDividedOnArray.Length % 2 == 0)
+            {
+                int n=0;
+
+                while((n+1)<(numberDividedOnArray.Length/2) )
+                {
+                    if(numberDividedOnArray[n] != numberDividedOnArray[numberDividedOnArray.Length - n])
+                    {
+
+                    }
+                    n++;
+                }
+
+
+            }
+
+
+
+
+            return 0;
+
+        }
+
+        private int[] getNumberOnArray(int number)
+        {
+            int n = number;
+            int count = 0;
+            
+            while (n != 0)
+            {
+                n /= 10;
+                count++;
+            }
+            int[] numberOnDigits = new int[count];
+
+            if (count != 0)
+            {
+                
+                count = 0;
+                n = number;
+                int n2;
+                while (n != 0)
+                {
+                    n2 = n % 10;
+                    numberOnDigits[count] = n2;
+                    n /= 10;
+                    count++;
+                }
+            }
+            return numberOnDigits;
+        }
         
         private int solution3;
         private long factors = 600851475143;

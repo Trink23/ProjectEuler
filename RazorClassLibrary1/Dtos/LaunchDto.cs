@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RazorClassLibrary1.Dtos
 {
-    internal class LaunchDto
+    public class LaunchDto
     {
         [JsonPropertyName("Id")]        
         public string Id { get; set; }

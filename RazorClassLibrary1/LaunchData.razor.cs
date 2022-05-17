@@ -11,6 +11,7 @@ namespace RazorClassLibrary1
         private HttpClient Http { get; set; }
         protected override async Task OnInitializedAsync()
         {
+
             launches = await Http.GetFromJsonAsync<LaunchDto[]>("https://api.spacex.land/rest/launches/");
         }
 
